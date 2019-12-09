@@ -1,0 +1,11 @@
+package com.emp;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TBL_EMP")
+
+public class Employee {
+
+}

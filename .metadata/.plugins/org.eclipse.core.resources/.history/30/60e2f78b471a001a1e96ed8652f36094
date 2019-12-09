@@ -1,0 +1,12 @@
+package com.main;
+
+import com.emp.Employee;
+
+public class Emp_Main {
+	Employee emp = new Employee();
+	emp.setName("Isha");
+	emp.setSalary(5000);
+	
+	
+
+}

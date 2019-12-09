@@ -1,0 +1,45 @@
+package com.PersonDao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.oneToOnne.Person;
+import com.passport.Passport;
+
+public class Person_Dao {
+	public void addPerson(Person p) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("oracleTest");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		
+		Person per = new Person();
+		
+		em.persist(p); 
+		
+		tx.commit();
+		
+		em.close();
+		emf.close();
+	}
+	public void addPassportWithAPerson(Passport pass, int personId) { ///personId to link the passport.
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("oracleTest");
+		EntityManager em = emf.createEntityManager();
+		Person p = em.find(Person.class, personId); //to get the table of a person.
+		
+		EntityTransaction tx = em.getTransaction();
+		pass.setPerson(p);  //doubt
+		tx.begin();
+		
+		em.persist(pass);
+		tx.commit();
+		em.close();
+		emf.close();
+		
+		
+	}
+	
+
+}

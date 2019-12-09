@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="Serve.lti">
+Welcome to the page
+  Custname:<br>
+  <input type="text" name="name">
+  <br>
+  CustEmail:<br>
+  <input type="text" name="email">
+  <br><br>
+   City:<br>
+  <input type="text" name="city">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>

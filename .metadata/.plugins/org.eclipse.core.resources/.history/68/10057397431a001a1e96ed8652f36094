@@ -1,0 +1,8 @@
+package EMP_DAO;
+
+public class EmpDao {
+	public void add(Employee employee) {
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<form action="mapping">
+<p>Click to find the Details: <a href="Find_Customer.html">To find the customer</a></p>
+<p>Click to register : <a href="Hi.html">To register</a></p>
+<input type="submit" value="showAll">
+
+</form>
+<form action="hey"><input type="submit" value="update"></form>
+
+</body>
+</html>

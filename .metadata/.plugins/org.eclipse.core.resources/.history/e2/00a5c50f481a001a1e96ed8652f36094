@@ -1,0 +1,14 @@
+package com.main;
+
+import com.emp.Employee;
+
+public class Emp_Main {
+	Employee emp = new Employee();
+	emp.setName("Isha");
+	emp.setSalary(5000);
+	emp.setDateOfJoining(LocalDate.of(2019,3,12));
+	
+	EmpDao dao = new Emp_Dao();
+	dao.add(emp);
+
+}

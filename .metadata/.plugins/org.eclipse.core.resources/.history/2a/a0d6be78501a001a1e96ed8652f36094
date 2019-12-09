@@ -1,0 +1,10 @@
+package com.oneToOnne;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TBL_PERSON")
+public class Person {
+
+}

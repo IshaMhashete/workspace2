@@ -1,0 +1,30 @@
+package com.oneToOnne;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import com.passport.Passport;
+
+@Entity
+@Table(name = "TBL_PERSON")
+public class Person {
+	
+	@Id
+	@GeneratedValue
+	@Column(name="PERSON_ID")
+	int personId;
+	
+	@Column(name="PERSON_NAME")
+	String personName;
+	
+	@Column(name= "PERSON_AGE")
+	int personAge;
+	
+	@OneToOne(mappedBy = "person")  //object of person table.
+	Passport passport; //passport object for the relation(1 to 1)
+
+}

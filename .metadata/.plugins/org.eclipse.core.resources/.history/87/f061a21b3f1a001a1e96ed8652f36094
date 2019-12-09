@@ -1,0 +1,26 @@
+package com.lti.servlet;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.lti.dao.CustomerDao;
+import com.lti.entity.Customer;
+
+/**
+ * Servlet implementation class UpdateCustomerServlet
+ */
+public class UpdateCustomerServlet extends HttpServlet {
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Customer c = new Customer();
+		c.setId(Integer.parseInt(request.getParameter("id")));
+		c.setName(request.getParameter("name"));
+		c.setEmail(request.getParameter("email"));
+		c.setCity(request.getParameter("city"));
+		
+	}
+
+}

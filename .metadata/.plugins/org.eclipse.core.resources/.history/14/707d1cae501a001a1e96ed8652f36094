@@ -1,0 +1,25 @@
+package com.oneToOnne;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TBL_PERSON")
+public class Person {
+	
+	@Id
+	@GeneratedValue
+	int personId;
+	
+	@Column(name="PERSON_NAME")
+	String personName;
+	
+	@Column(name= "PERSON_AGE")
+	int personAge;
+	
+	
+
+}

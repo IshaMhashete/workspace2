@@ -1,0 +1,11 @@
+package com.lti.dao;
+
+import com.lti.entity.Customer;
+
+public class CustomerDao {
+	public void add(Customer customer) {
+		
+		
+	}
+
+}

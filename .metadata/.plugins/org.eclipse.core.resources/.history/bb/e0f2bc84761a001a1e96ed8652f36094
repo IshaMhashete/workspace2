@@ -1,0 +1,23 @@
+package com.account;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TBL_ACC")
+public class Account {
+	
+	@Id
+	@GeneratedValue
+	int accNo;
+	
+	@Column(name="ACC_TYPE")
+	String accType;
+	
+	@Column(name="BALANCE")
+	Double balance;
+
+}

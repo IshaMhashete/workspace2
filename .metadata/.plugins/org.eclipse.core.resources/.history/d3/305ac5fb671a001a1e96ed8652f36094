@@ -1,0 +1,24 @@
+package com.address;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="ADD")
+public class Address {
+	@Id
+	@Column(name= "FLAY_NO")
+	int flatNo;
+	
+	@Column(name= "StreetNo")
+	String StreetNo;
+	
+	@Column(name= "LOCATION")
+	String location;
+	
+	@Column(name= "PINCODE")
+	int pindode;
+
+}

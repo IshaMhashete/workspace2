@@ -1,0 +1,72 @@
+package com.lti;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.dao.Dao;
+import com.lti.dao.CustomerDao;
+import com.lti.entity.Customer;
+ 
+/**
+ * Servlet implementation class Serve
+ */
+public class Serve extends HttpServlet{
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public Serve() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String Customer_name = request.getParameter("name");
+		 String Email_Id = request.getParameter("email");
+		 String city_name = request.getParameter("city");
+		 
+		 Customer c = new Customer();
+			c.setName(Customer_name);
+			c.setEmail(Email_Id);
+			c.setCity(city_name);
+			
+			Dao dao = new Dao();
+			dao.add(c);
+	 }
+
+		
+	
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		// get response writer
+        PrintWriter writer = response.getWriter();
+         
+        // build HTML code
+        String htmlRespone = "<html>";
+        htmlRespone += "<h2>The name of the customer is: " + Customer_name + "<br/>";      
+        htmlRespone += "Email Id is: " + Email_Id + "</h2>";    
+        htmlRespone += "The city name is: " + city_name+ "</h2>";    
+         
+        // return response
+        writer.println(htmlRespone);
+        
+        CustomerDao dao = new CustomerDao();
+		Customer c = dao.fetch(21);
+         
+	}
+
+}

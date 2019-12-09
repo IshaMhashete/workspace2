@@ -1,0 +1,8 @@
+package com.lti.dao;
+
+public class CustomerDao {
+	public void add(Customer customer) {
+		
+	}
+
+}

@@ -1,0 +1,68 @@
+package com.main;
+
+import com.lti.dao.AccountDao;
+import com.lti.entity.Account;
+
+
+public class MainClass {
+	public static void main(String[] args) {
+		//Customer c = new Customer();
+		//c.setName("Isha");
+		//c.setEmail("isha@lti");
+		//c.setCity("Mumbai");
+		
+		//CustomerDao dao = new CustomerDao();
+		//dao.add(c);
+		
+		/*CustomerDao dao = new CustomerDao();
+		Customer c = dao.fetch(21);
+		System.out.println(c.getName());
+		System.out.println(c.getEmail());
+		System.out.println(c.getCity());
+		*/
+		
+		/*CustomerDao dao = new CustomerDao();
+		List<Customer> list = dao.fetchAll();
+		
+		for(Customer c : list) {
+			System.out.println(c.getName());
+			System.out.println(c.getEmail());
+			System.out.println(c.getCity());
+			
+		
+		
+		}
+		*/
+	/*	CustomerDao dao = new CustomerDao();
+		Customer c = dao.fetch(21);
+		c.setCity("Delhi");
+		dao.update(c);
+		
+		
+		Person_Dao dao = new Person_Dao();
+		
+		
+		Person p = new Person();
+		p.setPersonName("John");
+		p.setPersonAge(45);
+		dao.addPerson(p);
+		
+		Passport pass = new Passport();
+		pass.setPassportNo("H3535");
+		pass.setIssueDate(LocalDate.of(2019, 12, 10));
+		pass.setExpiryDate(LocalDate.of(2029, 12, 9));
+		pass.setPlaceOfIssue("Mumbai");
+		
+		dao.addPassportWithAPerson(pass, 83);
+		*/
+		
+		AccountDao dao = new AccountDao();
+		Account acc = new Account();
+		acc.setAccBalance(10000);
+		acc.setAccType("Saving");
+		dao.addAccount(acc);
+		
+	
+	}
+
+}

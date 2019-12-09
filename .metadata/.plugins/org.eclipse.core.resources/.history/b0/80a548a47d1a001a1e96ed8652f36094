@@ -1,0 +1,68 @@
+package com.transaction;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import com.account.Account;
+
+@Entity
+@Table(name="TBL_TRANS")
+public class Transaction {
+	
+	@Id
+	@GeneratedValue
+	@Column(name= "TRANS_ID")
+	int transID;
+	
+	@Column(name="AMOUNT")
+	double amount;
+	
+	@Column(name="TRANSTYPE")
+	String transType;
+	
+	@ManyToOne
+	@JoinColumn(name = "acc_id")
+	Account acc;       //same as name in "mapped by" in Account.java.
+
+	public int getTransID() {
+		return transID;
+	}
+
+	public void setTransID(int transID) {
+		this.transID = transID;
+	}
+
+	public Double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Double amount) {
+		this.amount = amount;
+	}
+
+	public String getTransType() {
+		return transType;
+	}
+
+	public void setTransType(String transType) {
+		this.transType = transType;
+	}
+
+	public Account getAcc() {
+		return acc;
+	}
+
+	public void setAcc(Account acc) {
+		this.acc = acc;
+	}
+	
+	
+	
+	
+
+}

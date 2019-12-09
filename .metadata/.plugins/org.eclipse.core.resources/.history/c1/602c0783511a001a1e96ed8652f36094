@@ -1,0 +1,24 @@
+package com.passport;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.oneToOnne.Person;
+
+@Entity
+@Table(name="TBL_PASSPORT")
+public class Passport {
+	@Id
+	String passportNo;
+	
+	LocalDate issueDate;
+	
+	LocalDate expiryDate;
+	
+	Person person;
+	
+
+}

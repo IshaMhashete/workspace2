@@ -1,0 +1,15 @@
+package com.lti.dao;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.lti.entity.Customer;
+
+public class CustomerDao {
+	public void add(Customer customer) {
+		//Step1. Create/obtain  EntityManagerFactory object
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("???");
+		
+	}
+
+}

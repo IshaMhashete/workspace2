@@ -1,0 +1,10 @@
+package com.passport;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TBL_PASSPORT")
+public class Passport {
+
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+Welcome to the employee portal
+<form action="dao">
+<input type="text" name="name_Of_Emp">
+<input type="date" name="doj"/>
+<input type="submit" name="submit">
+</form>
+</body>
+</html>

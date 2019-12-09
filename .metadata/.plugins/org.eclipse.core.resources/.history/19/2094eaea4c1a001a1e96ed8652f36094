@@ -1,0 +1,36 @@
+package EMP_DAO;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.emp.Employee;
+import com.lti.entity.Customer;
+
+public class EmpDao {
+	public void add(Employee employee) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("oracleTest");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(employee); 
+		
+		tx.commit();
+		
+		em.close();
+		emf.close();
+		
+	}
+	
+	public void fetch(int employeeId) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("oracleTest");
+		EntityManager em = emf.createEntityManager();
+		Employee emp = (Employee)em.find(Employee.class, customerId);
+		em.persist(employeeId); 
+		em.close();
+		emf.close();
+		return emp;
+	}
+
+}

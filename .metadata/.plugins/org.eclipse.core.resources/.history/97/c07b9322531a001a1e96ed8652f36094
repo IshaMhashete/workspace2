@@ -1,0 +1,8 @@
+package com.PersonDao;
+
+public class Person_Dao {
+	public void addPerson(Person p) {
+		
+	}
+
+}

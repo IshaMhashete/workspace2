@@ -1,0 +1,33 @@
+package com.main;
+
+import com.address.Address;
+import com.lti.address.AddressDao;
+import com.user.User;
+
+public class AddressMain {
+	public static void main(String[] args) {
+		
+	
+	AddressDao dao = new AddressDao();
+	/*
+	Address a = new Address();
+	a.setFlatNo(101);
+	a.setStreetName("M.P.Marg");
+	a.setLocation("Mumbai");
+	a.setPincode(400102);
+	
+	dao.addAddress(a);
+	*/
+	
+	User user = new User();
+	user.setUserId(1);
+	user.setUserName("Amar");
+	user.setEmailId("amar@lti");
+	user.setContactNo(55642.0);
+	
+	dao.addAddress(addr);
+	
+	
+
+}
+}

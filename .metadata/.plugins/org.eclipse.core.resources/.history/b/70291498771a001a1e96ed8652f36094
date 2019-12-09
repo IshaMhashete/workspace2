@@ -1,0 +1,31 @@
+package com.account;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.transaction.Transaction;
+
+@Entity
+@Table(name="TBL_ACC")
+public class Account {
+	
+	@Id
+	@GeneratedValue
+	int accNo;
+	
+	@Column(name="ACC_TYPE")
+	String accType;
+	
+	@Column(name="BALANCE")
+	Double accBalance;
+	
+	@OneToMany
+	List<Transaction> transactions;
+
+}

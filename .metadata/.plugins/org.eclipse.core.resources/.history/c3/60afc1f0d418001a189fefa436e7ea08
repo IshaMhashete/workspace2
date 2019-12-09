@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p>Insert Customer Id to find details of the customer</p>
+<input type="number" name="customer_Id">
+<input type="button" name="submit">
+</body>
+</html>

@@ -1,0 +1,34 @@
+package com.address;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="ADD")
+public class Address {
+	
+	@Id
+	@GeneratedValue
+	@Column(name= "ADDRESS_INDEX_ID")
+	int indexId;
+
+	@Column(name= "FLAT_NO")
+	int flatNo;
+	
+	@Column(name= "STREET_NAME")
+	String StreetName;
+	
+	@Column(name= "LOCATION")
+	String location;
+	
+	@Column(name= "PINCODE")
+	int pincode;
+	
+	@OneToOne(mappedBy = "")
+	User user;
+
+}

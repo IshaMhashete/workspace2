@@ -1,0 +1,47 @@
+package com.lti.address;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.address.Address;
+import com.oneToOnne.Person;
+import com.passport.Passport;
+import com.user.User;
+
+
+
+public class AddressDao {
+	public void addAddress(Address address) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("oracleTest");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		
+		Address addr = new Address();
+		
+		em.persist(address); 
+		
+		tx.commit();
+		
+		em.close();
+		emf.close();
+	}
+	public void addAddressWithAUser(User user, int addressId) { ///personId to link the passport.
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("oracleTest");
+		EntityManager em = emf.createEntityManager();
+		Address addr = em.find(Address.class, addressId); //to get the table of a person.
+		
+		EntityTransaction tx = em.getTransaction();
+		user.setUser(addr);  //doubt
+		tx.begin();
+		
+		em.persist(u);
+		tx.commit();
+		em.close();
+		emf.close();
+		
+	}
+
+}

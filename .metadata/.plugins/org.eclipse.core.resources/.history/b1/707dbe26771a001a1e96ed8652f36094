@@ -1,0 +1,24 @@
+package com.transaction;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TBL_TRANS")
+public class Transaction {
+	
+	@Id
+	@GeneratedValue
+	@Column(name= "TRANS_ID")
+	int transID;
+	
+	@Column(name="AMOUNT")
+	Double amount;
+	
+	@Column(name="TRANSTYPE")
+	String transType;
+
+}

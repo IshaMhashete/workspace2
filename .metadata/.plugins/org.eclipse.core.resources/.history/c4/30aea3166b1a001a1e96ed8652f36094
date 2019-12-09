@@ -1,0 +1,12 @@
+package com.main;
+
+import com.address.Address;
+import com.lti.address.AddressDao;
+
+public class AddressMain {
+	AddressDao dao = new AddressDao();
+	Address addr = new Address();
+	addr.setFlatNo(101);
+	
+
+}

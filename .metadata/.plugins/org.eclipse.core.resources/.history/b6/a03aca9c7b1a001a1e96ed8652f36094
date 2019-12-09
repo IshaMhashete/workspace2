@@ -1,0 +1,65 @@
+package com.account;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.transaction.Transaction;
+
+@Entity
+@Table(name="TBL_ACC")
+public class Account {
+	
+	@Id
+	@GeneratedValue
+	int accNo;
+	
+	@Column(name="ACC_TYPE")
+	String accType;
+	
+	@Column(name="BALANCE")
+	Double accBalance;
+	
+	@OneToMany(mappedBy = "acc")
+	List<Transaction> transactions;
+
+	public int getAccNo() {
+		return accNo;
+	}
+
+	public void setAccNo(int accNo) {
+		this.accNo = accNo;
+	}
+
+	public String getAccType() {
+		return accType;
+	}
+
+	public void setAccType(String accType) {
+		this.accType = accType;
+	}
+
+	public Double getAccBalance() {
+		return accBalance;
+	}
+
+	public void setAccBalance(Double accBalance) {
+		this.accBalance = accBalance;
+	}
+
+	public List<Transaction> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(List<Transaction> transactions) {
+		this.transactions = transactions;
+	}
+	
+	
+
+}

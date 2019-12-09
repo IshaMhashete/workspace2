@@ -1,0 +1,23 @@
+package com.main;
+
+import com.address.Address;
+import com.lti.address.AddressDao;
+
+public class AddressMain {
+	public static void main(String[] args) {
+		
+	
+	AddressDao dao = new AddressDao();
+	/*
+	Address a = new Address();
+	a.setFlatNo(101);
+	a.setStreetName("M.P.Marg");
+	a.setLocation("Mumbai");
+	a.setPincode(400102);
+	*/
+	dao.addAddress(a);
+	
+	
+
+}
+}

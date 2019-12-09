@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click to find the Details: <a href="Find_Customer.html">To find the cutomer</a></p>
+<p>Click to register : <a href="Hi.html">To register</a></p>
+
+<form action="mapping">
+<p>Click to see all customers details : <a href="All.html">To view all customers</a></p>
+</form>
+</body>
+</html>

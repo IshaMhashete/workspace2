@@ -1,0 +1,8 @@
+package com.lti.address;
+
+public class AddressDao {
+	public void addAddress(Address address) {
+		
+	}
+
+}
